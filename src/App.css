@@ -1,7 +1,21 @@
 
+/* NAVBAR */
+.navbar {
+  background-color: #2B3823;
+}
+
+/* HOME */
 .carousel-item img {
   height: 500px;
   width:100%;
   object-fit: cover;
   text-align: center;
+}
+
+/* FOOTER */
+
+footer{
+  background-color: #2B3823;
+  color: white;
+
 }

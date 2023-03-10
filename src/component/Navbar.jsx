@@ -8,9 +8,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 function NavScrollExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="navbar" variant="dark"  expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Arska-Çiftlik</Navbar.Brand>
+        <Navbar.Brand href="/">Arska-Çiftlik</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
