@@ -1,18 +1,18 @@
 import React from "react";
 import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
-import salca from "../Image/salca.jfif";
-import pisirme from "../Image/yapım.jfif";
-import kurutma from "../Image/kuruta.jfif";
+import yıkama from "../Image/yıkama.jpeg";
+import biber from "../Image/biber.jpeg";
+import kurutma from "../Image/kurutma1.jpeg";
 
 function Home() {
   return (
     <div>
       <header className="d-flex justify-content-center">
-        <Container fluid className="bg-light p-3 m-5">
-          <h1>Arska Çiftlik</h1>
+        <Container fluid className="bg-purple p-3 m-5">
+          <h1 className="d-flex justify-content-center align-items-center">Arska Çiftlik</h1>
             <Carousel fade>
               <Carousel.Item>
-                <img className="d-block" src={salca} alt="First slide" />
+                <img className="d-block" src={yıkama} alt="First slide" />
                 <Carousel.Caption>
                   <h3>Welcome to our natural food store</h3>
                   <p>Explore our range of organic products</p>
@@ -32,7 +32,7 @@ function Home() {
               <Carousel.Item>
                 <img
                   className="d-block"
-                  src={pisirme}
+                  src={biber}
                   alt="Third slide"
                 />
                 <Carousel.Caption>

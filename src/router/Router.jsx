@@ -5,6 +5,7 @@ import Navbar from "../component/Navbar";
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Home from '../pages/Home';
+import Production from '../pages/Production';
 import Products from '../pages/Products';
 
 const Router = () => {
@@ -16,6 +17,7 @@ const Router = () => {
                     <Route path='products' element={<Products />} />
                     <Route path='about' element={<About />} />
                     <Route path='contact' element={<Contact />} />
+                    <Route path='production' element={<Production />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>

@@ -30,6 +30,7 @@ function NavScrollExample() {
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="about">Hakkımızda</Nav.Link>
+            <Nav.Link href="production">Üretim</Nav.Link>
             <Nav.Link href="contact">İletişim</Nav.Link>
           </Nav>
           {/* <Form className="d-flex">
