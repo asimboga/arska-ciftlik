@@ -9,7 +9,7 @@ function Home() {
     <div className="view">
       <header className="d-flex justify-content-center">
         <Container fluid className="bg-purple p-3 m-5">
-          <h1 className="d-flex justify-content-center align-items-center">Arska Çiftlik</h1>
+          <h1 className="d-flex justify-content-center align-items-center">Doğal Ürünlerin Adresi: Arska Çiftlik</h1>
             <Carousel fade>
               <Carousel.Item>
                 <img className="d-block" src={yıkama} alt="First slide" />

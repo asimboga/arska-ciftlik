@@ -2,7 +2,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 
 const About = () => {
   return (
-    <Container className="container-fluid view">
+    <Container className="container-fluid view d-flex flex-column justify-content-center">
       <Row>
         <Col md={6} className="p-5 text-center align-items-center justify-content-center">
           <Image src="https://via.placeholder.com/350x150" fluid />

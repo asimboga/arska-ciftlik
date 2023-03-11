@@ -20,9 +20,9 @@ const ContactForm = () => {
   };
 
   return (
-<Container className="container-fluid view">
+<Container className="container-fluid view d-flex flex-column justify-content-center">
   <Row className="">
-    <Col xs={12} md={6} className="p-5 text-center align-items-center justify-content-center">
+    <Col xs={12} md={6} className="d-flex flex-column text-center align-items-center justify-content-center">
       <h2>Bize Ulaşın</h2>
       <ul className="list-unstyled">
         <li><FaYoutube /> <a href="https://www.youtube.com/channel/UCd8e-ghMPaM0GKvuonP939A"> @arskaciftlik</a></li>
