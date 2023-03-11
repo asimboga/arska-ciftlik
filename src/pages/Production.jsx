@@ -5,7 +5,7 @@ import yıkama from "../Image/yıkama.jpeg";
 
 const Production = () => {
   return (
-    <Container>
+    <Container className="view">
       <h2 className="text-center my-5">Üretim Aşamaları</h2>
       <Row className="mb-5">
         <Col>

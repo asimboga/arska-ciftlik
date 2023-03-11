@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaYoutube, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 const ContactForm = () => {
   const [formFields, setFormFields] = useState({
@@ -20,13 +20,12 @@ const ContactForm = () => {
   };
 
   return (
-<Container>
+<Container className="container-fluid view">
   <Row className="">
     <Col xs={12} md={6} className="p-5 text-center align-items-center justify-content-center">
       <h2>Bize Ulaşın</h2>
       <ul className="list-unstyled">
-        <li><FaYoutube /> Telefon: +90 (212) 555 55 55</li>
-        <li><FaTwitter /> Telefon: +90 (212) 555 55 55</li>
+        <li><FaYoutube /> <a href="https://www.youtube.com/channel/UCd8e-ghMPaM0GKvuonP939A"> @arskaciftlik</a></li>
         <li><FaInstagram /> Telefon: +90 (212) 555 55 55</li>
         <li><FaPhone /> Telefon: +90 (212) 555 55 55</li>
         <li><FaEnvelope /> E-posta: arskaciftlik@gmail.com</li>

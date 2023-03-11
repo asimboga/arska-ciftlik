@@ -6,7 +6,7 @@ import kurutma from "../Image/kurutma1.jpeg";
 
 function Home() {
   return (
-    <div>
+    <div className="view">
       <header className="d-flex justify-content-center">
         <Container fluid className="bg-purple p-3 m-5">
           <h1 className="d-flex justify-content-center align-items-center">Arska Çiftlik</h1>
