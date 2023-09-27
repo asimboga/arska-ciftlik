@@ -1,46 +1,89 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button, Carousel } from "react-bootstrap";
-import yıkama from "../Image/yıkama.jpeg";
-import biber from "../Image/biber.jpeg";
-import kurutma from "../Image/kurutma1.jpeg";
+import cekilis from "../Image/cekilis.mp4";
+import yapim from "../Image/yapim.mp4";
+import afiyet from "../Image/afiyet.mp4";
 
 function Home() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const carouselRef = useRef(null);
+
+  const handleVideoEnded = () => {
+    const nextIndex = (activeIndex + 1) % 3;
+    setActiveIndex(nextIndex);
+    const nextVideo = document.getElementById(`video${nextIndex + 1}`);
+    nextVideo.play();
+  };
+
+  useEffect(() => {
+    const firstVideo = document.getElementById("video1");
+    firstVideo.play();
+  }, []);
+
+  // Ekran genişliğine göre video boyutlarını ayarla
+  const videoWidth = window.innerWidth < 768 ? 320 : 800;
+  const videoHeight = (videoWidth / 16) * 9;
+
   return (
     <div className="view">
       <header className="d-flex justify-content-center">
-        <Container fluid className="bg-purple p-3 m-5">
-          <h1 className="d-flex justify-content-center align-items-center">Doğal Ürünlerin Adresi: Arska Çiftlik</h1>
-            <Carousel fade>
-              <Carousel.Item>
-                <img className="d-block" src={yıkama} alt="First slide" />
-                <Carousel.Caption>
-                  <h3>Welcome to our natural food store</h3>
-                  <p>Explore our range of organic products</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block"
-                  src={kurutma}
-                  alt="Second slide"
-                />
-                <Carousel.Caption>
-                  <h3>Fresh fruits and vegetables</h3>
-                  <p>Choose from our selection of locally sourced produce</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <img
-                  className="d-block"
-                  src={biber}
-                  alt="Third slide"
-                />
-                <Carousel.Caption>
-                  <h3>Healthy and delicious snacks</h3>
-                  <p>Find the perfect snack for your active lifestyle</p>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
+        <Container fluid className="bg-purple p-3 ">
+          <h1 className="d-flex justify-content-center align-items-center">
+            Doğal Ürünlerin Adresi: Arska Çiftlik
+          </h1>
+          <Carousel
+            id="video-carousel-example"
+            fade
+            controls={false}
+            ref={carouselRef}
+            interval={false}
+            activeIndex={activeIndex}
+            onSelect={() => {}}
+            className="text-center"
+          >
+            <Carousel.Item>
+              <video
+                id="video1"
+                width={videoWidth}
+                height={videoHeight}
+                controls
+                onEnded={handleVideoEnded}
+                autoPlay
+                muted
+              >
+                <source src={cekilis} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video
+                id="video2"
+                width={videoWidth}
+                height={videoHeight}
+                controls
+                onEnded={handleVideoEnded}
+                autoPlay
+                muted
+              >
+                <source src={yapim} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </Carousel.Item>
+            <Carousel.Item>
+              <video
+                id="video3"
+                width={videoWidth}
+                height={videoHeight}
+                controls
+                onEnded={handleVideoEnded}
+                autoPlay
+                muted
+              >
+                <source src={afiyet} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </Carousel.Item>
+          </Carousel>
         </Container>
       </header>
       <main>

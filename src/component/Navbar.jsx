@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function NavScrollExample() {
   return (
-    <Navbar className="navbar navbar-expand-lg" variant="dark" expand="lg">
+    <Navbar className="navbar navbar-expand-lg" variant="dark">
       <Container fluid>
         <Navbar.Brand as={NavLink} to="/">
           Arska-Çiftlik
